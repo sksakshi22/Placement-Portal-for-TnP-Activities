@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Department of Instrumentation Engineering</title>
+    <title>Previously Visited Company</title>
+
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -29,6 +30,8 @@
     <!-- Custom Theme Style -->
     <link href="../public/build/css/custom.min.css" rel="stylesheet">
   </head>
+
+
 
   <body class="nav-md">
     <div class="container body">
@@ -59,22 +62,23 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a href="/drives"><i class="fa fa-list"></i> Drives </a>
+                  <li><a href="drives.html"><i class="fa fa-list"></i> Drives </a>
                    </li>
                   <li><a><i class="fa fa-building-o"></i> Company <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="visitedCompanies.html">Visited Company</a></li>
-                      <li><a href="recruiterHistory.html">Recruiter History</a></li>
+                      <li><a href="/recruiterHistory">Recruiter History</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-graduation-cap"></i> Students <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="/btechComp">B.Tech Computer</a></li>
-                      <li><a href="/btechIT">B.Tech IT </a></li>
-                      <li><a href="/btechEntc">B.tech ENTC</a></li>
-                      <li><a href="/btechIS">B.Tech Instrumentation </a></li>
-                      <li><a href="/btechMechanical">B.Tech Mechanical</a></li>
-                  
+                      <ul class="nav child_menu">
+                        <li><a href="/btechComp">B.Tech Computer</a></li>
+                        <li><a href="/btechIT">B.Tech IT </a></li>
+                        <li><a href="/btechEntc">B.tech ENTC</a></li>
+                        <li><a href="/btechIS">B.Tech Instrumentation </a></li>
+                        <li><a href="/btechMechanical">B.Tech Mechanical</a></li>
+                        </ul>
                     </ul>
                   </li>
                   <li><a href=""><i class="fa fa-edit"></i> Create Notice</a>
@@ -223,7 +227,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Department of Instrumentation Engineering <small></small></h2>
+                    <h2>Previously Visited Company </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -238,43 +242,41 @@
                       </li>
                     </ul>
                     <div class="clearfix"></div>
-                  
-                    
-                    
                   </div>
                   <div class="x_content">
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
-                              <a href="studentRegistrationForm"><button type="button" class="btn btn-info btn-xs " style="float: right;" >Add New Student</button></a><table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
+                              <a href="visitedCompanyRegistrationForm"><button type="button" class="btn btn-info btn-xs " style="float: right;" >Add Company Details</button></a>
+                    <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
-                        <tr>88
-                          <th>Roll No</th>
-                          <th>C Number</th>
-                          <th>Student Name</th>
-                          <th>Branch</th>
-                          <th>Email Id</th>
-                          <th>Phone No</th>
-						              <th>Batch</th>
-						              <th>Status</th>
+                        <tr>
+                          <th>Comapany Name</th>
+                          <th>Location</th>
+                          <th>CTC</th>
+                          <th>CGPA Criteria</th>
+                          <th>Eligible Branches</th>
+						  <th>Job Profile</th>
+                          <th>Year Visited</th>
+
                         </tr>
                       </thead>
+                      
                       <tbody>
-                        <%studentList.forEach(student=>{%>
+                        <%visitedCompanyList.forEach(company=>{%>
                         <tr>
-                        <td> <%= student.rollno %> </td>
-                         <td><%= student.cno %></td>
-                         <td><%= student.name %></td>
-                         <td><%= student.branch %></td>
-                         <td><%= student.email %></td>
-                         <td><%= student.phone %></td>
-                         <td><%= student.batch %></td>
-                         <td><%= student.status %></td>
+                        <td> <%= company.name %> </td>
+                         <td><%= company.location %></td>
+                         <td><%= company.ctc %></td>
+                         <td><%= company.cgpa %></td>
+                         <td><%= company.branch %></td>
+                         <td><%= company.job %></td>
+                         <td><%= company.year %></td>
+                        
                        </tr>
                        <% })%>
-                       
-  
                       </tbody>
+
 
                      </table>
                   </div>
@@ -293,7 +295,6 @@
         <!-- /footer content -->
       </div>
     </div>
-
     <!-- jQuery -->
     <script src="../public/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
