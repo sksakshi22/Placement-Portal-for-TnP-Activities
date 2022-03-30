@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>TnP Portal </title>
+
+    <!-- Bootstrap -->
+    <link href="public/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="public/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="public/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="public/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+     <!-- Main css -->
+     <link rel="stylesheet" href="drives/css/style.css">
+    <!-- bootstrap-progressbar -->
+    <link href="public/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="public/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="public/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="public/build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Cummins TnP Portal</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Arya Jadhav</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="/drives"><i class="fa fa-list"></i> Drives </a>
+                   </li>
+                  <li><a><i class="fa fa-building-o"></i> Company <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/visitedCompanies">Visited Company</a></li>
+                      <li><a href="/recruiterHistory">Recruiter History</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-graduation-cap"></i> Students <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/btechComp">B.Tech Computer</a></li>
+                      <li><a href="/btechIT">B.Tech IT </a></li>
+                      <li><a href="/btechEntc">B.tech ENTC</a></li>
+                      <li><a href="/btechIS">B.Tech Instrumentation </a></li>
+                      <li><a href="/btechMechanical">B.Tech Mechanical</a></li>
+                    </ul>
+                  </li>
+                  <li><a href=""><i class="fa fa-edit"></i> Create Notice</a>
+                  </li>
+                  <li><a href="notifications.html"><i class="fa fa-paper-plane"></i> Notifications </a>
+                  </li>
+                <li><a href="analytics.html"><i class="fa fa-bar-chart"></i> Analytics</a>
+                  </li>
+                  <li><a href="interviewExp.html"><i class="fa fa-file-text-o"></i> Interview Experience</a>
+                  </li>
+                  <li><a href="/tpoRoles"><i class="fa fa-user-plus"></i> Add TPO Roles</a>
+                  </li>
+                  
+              </div>
+              
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <nav class="nav navbar-nav">
+              <ul class=" navbar-right">
+                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">Arya Jadhav
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                      <a class="dropdown-item"  href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                  <a class="dropdown-item"  href="javascript:;">Help</a>
+                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+                </li>
+
+                <li role="presentation" class="nav-item dropdown open">
+                  <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                    <style>
+                      .fa-2x{
+                        font-size:2em !important;
+                    };
+                </style>
+                
+                    <i class="fa fa-bell-o fa-2x"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="text-center">
+                        <a href="notifications.html" class="dropdown-item">
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <a href="drivesRegistrationForm"><button type="button" class="btn btn-info btn-xs " style="float: right;" >Add New Drive</button></a>
+                    
+          <div class="tr-job-posted section-padding">
+            <div class="job-tab text-center">
+              <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li role="presentation" class="active">
+                  <a class="active show" href="#recent-jobs" aria-controls="recent-jobs" role="tab" data-toggle="tab" aria-selected="true">Current</a>
+                </li>
+                <li role="presentation"><a href="#upcoming-jobs" aria-controls="upcoming-jobs" role="tab" data-toggle="tab" class="" aria-selected="false">Finished</a></li>
+                
+                <li role="presentation"><a href="#finished-jobs" aria-controls="finished-jobs" role="tab" data-toggle="tab" class="" aria-selected="false">Upcoming</a></li>
+                
+              </ul>
+              <div class="tab-content text-left">
+                <div role="tabpanel" class="tab-pane fade active show" id="recent-jobs">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                      <div class="job-item">
+                        <div class="item-overlay">
+                          <div class="job-info">
+                            <a href="#" class="btn btn-primary">Full Time</a>
+                            <span class="tr-title">
+                              <br>
+                              <a href="#">Project Manager</a> <br>
+                              <span><a href="#"><strong>Cisco</strong></a></span> <br> <br>
+                            </span>
+                            <ul class="tr-list job-meta">
+                              <li><i class="fa fa-map-signs" aria-hidden="true"></i>Java Full Stack Development</li>
+                              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>8 CGPA with NO backlog </li>
+                              <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Drive Date :   </li>
+                           
+                            </ul>
+                            
+                          </div>										
+                        </div>
+                        <div class="job-info">
+                          <span class="tr-title">
+                            <a href="#"><h6><b>CISCO</b></h6><a>
+                            <span><a href="#">Job Role : Project Manager</a></span>
+                          </span>
+                          <br><br>
+                          <ul class="tr-list job-meta">
+                            <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>Bangalore</li>
+                            <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>BTech Comp ,IT ,Entc </li>
+                            <li><span><i class="fa fa-money" aria-hidden="true"></i></span>Rs 26,00,000</li>
+                          </ul>
+                          <div class="time">
+                            <a href="#"><span>Apply</span></a>
+                            <span class="pull-right">Posted 23 hours ago</span>
+                          </div>																				
+                        </div>
+                      </div>
+                    </div>
+                    <%drivesList.forEach(drives=>{%>
+                     
+                    <div class="col-md-6 col-lg-3">
+                      <div class="job-item">
+                        <div class="item-overlay">
+                          <div class="job-info">
+                            <a href="#" class="btn btn-primary">Full Time</a>
+                            <span class="tr-title">
+                              <br>
+                              <a href="#"><%= drives.job %></a> <br>
+                              <span><a href="#"><h6><strong><%= drives.name %></h6></strong></a></span>  <br>
+                            </span>
+                            <ul class="tr-list job-meta">
+                              <li><i class="fa fa-map-signs" aria-hidden="true"></i><%= drives.domain %></li>
+                              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= drives.cgpa %> </li>
+                              <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Drive Date : <%= drives.date %>  </li>
+                           
+                            </ul>
+                            
+                          </div>										
+                        </div>
+                        <div class="job-info">
+                          <span class="tr-title">
+                            <a href="#"><h6><b><%= drives.name %></b></h6><a>
+                            <span><a href="#"><%= drives.job %></a></span>
+                          </span>
+                          <br><br>
+                          <ul class="tr-list job-meta">
+                            <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= drives.location %></li>
+                            <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= drives.branch %> </li>
+                            <li><span><i class="fa fa-money" aria-hidden="true"></i></span>Rs <%= drives.ctc %> LPA</li>
+                          </ul>
+                          <div class="time">
+                            <a href="#"><span>Apply</span></a>
+                            <span class="pull-right">Posted 23 hours ago</span>
+                          </div>																				
+                        </div>
+                      </div>
+                    </div>
+                    <% })%>
+                    
+
+                  </div><!-- /.row -->
+                </div><!-- /.tab-pane -->
+                <div role="tabpanel" class="tab-pane fade in" id="upcoming-jobs">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                      <div class="job-item">
+                        <div class="item-overlay">
+                          <div class="job-info">
+                            <a href="#" class="btn btn-primary">Full Time</a>
+                            <span class="tr-title">
+                              <br>
+                              <a href="#">Project Manager</a> <br>
+                              <span><a href="#"><strong>Cisco</strong></a></span> <br> <br>
+                            </span>
+                            <ul class="tr-list job-meta">
+                              <li><i class="fa fa-map-signs" aria-hidden="true"></i>Java Full Stack Development</li>
+                              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>8 CGPA with NO backlog </li>
+                              <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Drive Date :   </li>
+                           
+                            </ul>
+                            
+                          </div>										
+                        </div>
+                        <div class="job-info">
+                          <span class="tr-title">
+                            <a href="#"><h6><b>CISCO</b></h6><a>
+                            <span><a href="#">Job Role : Project Manager</a></span>
+                          </span>
+                          <br><br>
+                          <ul class="tr-list job-meta">
+                            <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>Bangalore</li>
+                            <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>BTech Comp ,IT ,Entc </li>
+                            <li><span><i class="fa fa-money" aria-hidden="true"></i></span>Rs 26,00,000</li>
+                          </ul>
+                          <div class="time">
+                            <a href="#"><span>Apply</span></a>
+                            <span class="pull-right">Posted 23 hours ago</span>
+                          </div>																				
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <%drivesList.forEach(drives=>{%>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="job-item">
+                          <div class="item-overlay">
+                            <div class="job-info">
+                              <a href="#" class="btn btn-primary">Full Time</a>
+                              <span class="tr-title">
+                                <br>
+                                <a href="#"><%= drives.job %></a> <br>
+                                <span><a href="#"><h6><strong><%= drives.name %></h6></strong></a></span>  <br>
+                              </span>
+                              <ul class="tr-list job-meta">
+                                <li><i class="fa fa-map-signs" aria-hidden="true"></i><%= drives.domain %></li>
+                                <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= drives.cgpa %> </li>
+                                <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Drive Date : <%= drives.date %>  </li>
+                             
+                              </ul>
+                              
+                            </div>										
+                          </div>
+                          <div class="job-info">
+                            <span class="tr-title">
+                              <a href="#"><h6><b><%= drives.name %></b></h6><a>
+                              <span><a href="#"><%= drives.job %></a></span>
+                            </span>
+                            <br><br>
+                            <ul class="tr-list job-meta">
+                              <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= drives.location %></li>
+                              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= drives.branch %> </li>
+                              <li><span><i class="fa fa-money" aria-hidden="true"></i></span>Rs <%= drives.ctc %> LPA</li>
+                            </ul>
+                            <div class="time">
+                              <a href="#"><span>Apply</span></a>
+                              <span class="pull-right">Posted 23 hours ago</span>
+                            </div>																				
+                          </div>
+                        </div>
+                      </div>
+                      <% })%>
+                      
+                  </div><!-- /.row -->	
+                </div><!-- /.tab-pane -->
+                <div role="tabpanel" class="tab-pane fade in" id="finished-jobs">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                      <div class="job-item">
+                        <div class="item-overlay">
+                          <div class="job-info">
+                            <a href="#" class="btn btn-primary">Full Time</a>
+                            <span class="tr-title">
+                              <br>
+                              <a href="#">Project Manager</a> <br>
+                              <span><a href="#"><strong>Cisco</strong></a></span> <br> <br>
+                            </span>
+                            <ul class="tr-list job-meta">
+                              <li><i class="fa fa-map-signs" aria-hidden="true"></i>Java Full Stack Development</li>
+                              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>8 CGPA with NO backlog </li>
+                              <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Drive Date :   </li>
+                           
+                            </ul>
+                            
+                          </div>										
+                        </div>
+                        <div class="job-info">
+                          <span class="tr-title">
+                            <a href="#"><h6><b>CISCO</b></h6><a>
+                            <span><a href="#">Job Role : Project Manager</a></span>
+                          </span>
+                          <br><br>
+                          <ul class="tr-list job-meta">
+                            <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>Bangalore</li>
+                            <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>BTech Comp ,IT ,Entc </li>
+                            <li><span><i class="fa fa-money" aria-hidden="true"></i></span>Rs 26,00,000</li>
+                          </ul>
+                          <div class="time">
+                            <a href="#"><span>Apply</span></a>
+                            <span class="pull-right">Posted 23 hours ago</span>
+                          </div>																				
+                        </div>
+                      </div>
+                    </div>
+                    <%drivesList.forEach(drives=>{%>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="job-item">
+                          <div class="item-overlay">
+                            <div class="job-info">
+                              <a href="#" class="btn btn-primary">Full Time</a>
+                              <span class="tr-title">
+                                <br>
+                                <a href="#"><%= drives.job %></a> <br>
+                                <span><a href="#"><h6><strong><%= drives.name %></h6></strong></a></span>  <br>
+                              </span>
+                              <ul class="tr-list job-meta">
+                                <li><i class="fa fa-map-signs" aria-hidden="true"></i><%= drives.domain %></li>
+                                <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= drives.cgpa %> </li>
+                                <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Drive Date : <%= drives.date %>  </li>
+                             
+                              </ul>
+                              
+                            </div>										
+                          </div>
+                          <div class="job-info">
+                            <span class="tr-title">
+                              <a href="#"><h6><b><%= drives.name %></b></h6><a>
+                              <span><a href="#"><%= drives.job %></a></span>
+                            </span>
+                            <br><br>
+                            <ul class="tr-list job-meta">
+                              <li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span><%= drives.location %></li>
+                              <li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span><%= drives.branch %> </li>
+                              <li><span><i class="fa fa-money" aria-hidden="true"></i></span>Rs <%= drives.ctc %> LPA</li>
+                            </ul>
+                            <div class="time">
+                              <a href="#"><span>Apply</span></a>
+                              <span class="pull-right">Posted 23 hours ago</span>
+                            </div>																				
+                          </div>
+                        </div>
+                      </div>
+                      <% })%>
+                      
+                  </div><!-- /.row -->	
+                </div><!-- /.tab-pane -->
+              </div>				
+            </div><!-- /.job-tab -->			
+        <!-- /.container -->
+        </div>
+        
+        <style type="text/css">
+        body{
+            background-color: #f5f4f5;
+            margin-top:20px;
+          }
+        
+        /* Tr Job Post */
+        
+        .job-item {
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+        }
+        
+        .job-tab .nav-tabs {
+          margin-bottom: 60px;
+          border-bottom: 0;
+          
+        }
+        
+        .job-tab .nav-tabs>li {
+          float: none;
+          display: inline;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+
+        }
+        
+        .job-tab .nav-tabs li {
+          margin-right: 15px;
+        }
+        
+        .job-tab .nav-tabs li:last-child {
+          margin-right: 0;
+        }
+        
+        .job-tab .nav-tabs {
+          position: relative;
+          z-index: 1;
+          display: inline-block;
+        }
+        
+        .job-tab .nav-tabs:after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #fff;
+          z-index: -1;
+        }
+        
+        
+        
+        .job-tab .nav-tabs>li a {
+          display: inline-block;
+          background-color: #fff;
+          border: none;
+          border-radius: 30px;
+          font-size: 14px;
+          color: #000;
+          padding: 5px 30px;
+        }
+        
+        .job-tab .nav-tabs>li>a.active, 
+        .job-tab .nav-tabs>li a.active>:focus, 
+        .job-tab .nav-tabs>li>a.active:hover,
+        .job-tab .nav-tabs>li>a:hover {
+          border: none;
+          background-color: #008def;
+          color: #fff;
+        }
+        
+        .job-item {
+          border-radius: 3px;
+          position: relative;
+          margin-bottom: 30px;
+          z-index: 1;
+        }
+        
+        .job-item .btn.btn-primary {
+          text-transform: capitalize;
+        }
+        
+        .job-item .job-info {
+          font-size: 14px;
+          color: #000;
+          overflow: hidden;
+          padding: 40px 25px 20px;
+        }
+        
+        .job-info .company-logo {
+          margin-bottom: 30px;
+        }
+        
+        .job-info .tr-title {
+          margin-bottom: 15px;
+        }
+        
+        .job-info .tr-title span {
+          font-size: 14px;
+          display: block;
+        }
+        
+        .job-info .tr-title a {
+          color: #000;
+        }
+        
+        .job-info .tr-title a:hover {
+          color: #008def;
+        }
+        
+        .job-info ul {
+          margin-bottom: 30px;
+        }
+        
+        .job-meta li,
+        .job-meta li a {
+          color: #646464;	
+        }
+        
+        .job-meta li a:hover {
+          color: #008def;
+        }
+        
+        .job-meta li {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        
+        .job-meta li span i {
+          color: #000;
+        }
+        
+        .job-meta li i {
+          margin-right: 15px;
+        }
+        
+        .job-item .time {
+          position: relative;
+        }
+        
+        .job-item .time:after {
+          position: absolute;
+          content: "";
+          bottom: 35px;
+          left: -50px;
+          width: 150%;
+          height: 1px;
+          background-color: #f5f4f5;
+          z-index: -1;
+        }
+        
+        .job-item:hover .time,
+        .job-item:hover .time:after {
+          opacity: 0;
+        }
+        
+        .job-item .time span {
+          font-size: 12px;
+          color: #bebebe;
+          line-height: 25px;
+        }
+        
+        .job-item .btn.btn-primary,
+        .role .btn.btn-primary,
+        .job-item .time a span {
+          padding: 5px 10px;
+            border-radius: 4px;
+            line-height: 10px;
+            font-size: 12px;
+        }
+        
+        .job-item .time a span {
+          color: #fff;
+            background-color: #f1592a;
+            border-color: #f1592a;	
+        }
+        
+        .job-item .time a span.part-time {
+          background-color: #00aeef;
+          border-color: #00aeef;
+        }
+        
+        .job-item .time a span.freelance {
+          background-color: #92278f;
+          border-color: #92278f;	
+        }
+        
+        .job-item .item-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          background-color: #008def;
+          color: #fff;
+          opacity: 0;
+          -webkit-transition: all 800ms;
+          -moz-transition: all 800ms;
+          -ms-transition: all 800ms;
+          -o-transition: all 800ms;
+          transition: all 800ms;
+        }
+        
+        .job-item:hover .item-overlay {
+          opacity: 1;
+        }
+        
+        .item-overlay .job-info {
+          padding: 45px 25px 40px;
+          overflow: hidden;
+        }
+        
+        .item-overlay .btn.btn-primary {
+          background-color: #007bd4;
+          border-color: #007bd4;
+          margin-bottom: 10px;
+        }
+        
+        .item-overlay .job-info,
+        .item-overlay .job-info ul li,
+        .item-overlay .job-info ul li i,
+        .item-overlay .job-info .tr-title a {
+          color: #fff;
+        }
+        
+        .job-social {
+          margin-top: 35px;
+        }
+        
+        .job-social li {
+          float: left;
+        }
+        
+        .job-social li + li {
+          margin-left: 15px;
+        }
+        
+        .job-social li a i {
+          margin-right: 0;
+          font-size: 14px;
+        }
+        
+        .job-social li a {
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          display: block;
+          background-color: #007bd4;
+          line-height: 35px;
+          border-radius: 100%;
+          border: 1px solid #007bd4;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+        }
+        
+        .job-social li:last-child a {
+          background-color: #fff;
+        }
+        
+        .job-social li:last-child a i {
+          color: #008def;
+        }
+        
+        .job-social li a:before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          border-radius: 100%;
+          background-color:#008def;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);	
+        }
+        
+        .job-social li a:hover:before {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            padding: 5px;
+        }
+        
+        .job-social li a:hover {
+          border-color: #fff;
+        }
+        
+        .job-social li a:hover i {
+          color: #fff;
+        }
+        
+        .tr-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        </style>
+        
+        <script type="text/javascript">
+        
+        </script>
+        
+        <!-- /page content -->
+        
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            MKSSS's Cummins College of Engineering for Women, Pune.
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="public/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="public/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="public/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="public/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="public/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="public/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="public/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="public/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="public/vendors/Flot/jquery.flot.js"></script>
+    <script src="public/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="public/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="public/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="public/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="public/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="public/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="public/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="public/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="public/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="public/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="public/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="public/vendors/moment/min/moment.min.js"></script>
+    <script src="public/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="public/build/js/custom.min.js"></script>
+	
+  </body>
+</html>

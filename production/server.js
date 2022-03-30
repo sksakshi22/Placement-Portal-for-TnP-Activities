@@ -4,6 +4,7 @@ const mongoose=require("mongoose");
 const bodyParser=require("body-parser");
 var path = require('path')
 const ejs=require('ejs');
+const router=express.Router();
 
 app.set('view engine','ejs');
 
@@ -50,12 +51,24 @@ const companySchema={
     job :String,
     year:String
 }
+const drivesSchema={
+    name:String,
+    job :String,
+    location:String,
+    branch:String,
+    ctc:String,
+    domain:String,
+    cgpa :String,
+    date:String,
+    status:String
+}
 
 //database model
 const Student=mongoose.model("Student",studentSchema);
 const Recruiter=mongoose.model("Recruiter",recruiterSchema);
 const Company=mongoose.model("Company",companySchema);
 const TpoRole=mongoose.model("TpoRole",tpoRoleSchema);
+const Drives=mongoose.model("Drives",drivesSchema);
 
 //index admin pages
 app.get('/btechIS',(req,res)=>{
@@ -73,6 +86,17 @@ app.get('/btechComp',(req,res)=>{
         })
     })
 })
+
+// router.get('/btechComp/:id',(req,res)=>{
+//     Student.findById(req.params.id,(err,students)=>{
+//         res.render('btechComp',{
+//             studentList:students
+//     });
+//     });
+// });
+
+module.exports=router;
+
 app.get('/btechMechanical',(req,res)=>{
     Student.find({},function(err,students){
         res.render('btechMechanical',{
@@ -87,6 +111,8 @@ app.get('/btechIT',(req,res)=>{
         })
     })
 })
+
+
 app.get('/btechEntc',(req,res)=>{
     Student.find({},function(err,students){
         res.render('btechEntc',{
@@ -101,6 +127,15 @@ app.get('/tpoRoles',(req,res)=>{
         })
     })
 })
+
+app.get('/drives',(req,res)=>{
+    Drives.find({},function(err,drives){
+        res.render('drives',{
+            drivesList:drives
+        })
+    })
+})
+
 
 app.get('/recruiterHistory',(req,res)=>{
     Recruiter.find({},function(err,recruiters){
@@ -118,7 +153,8 @@ app.get('/visitedCompanies',(req,res)=>{
 })
 
 app.get("/studentRegistrationForm",function(req,res){
-  res.sendFile(__dirname+"/studentRegForm.html");
+  res.render("studentRegForm");
+
     //res.sendFile(__dirname+"/indexAdmin.html");  
 })
 app.get("/RecruiterRegistrationForm",function(req,res){
@@ -133,7 +169,9 @@ app.get("/RecruiterRegistrationForm",function(req,res){
   
   app.get("/tpoRegistrationForm",function(req,res){
     res.sendFile(__dirname+"/tpoRegForm.html");
-      //res.sendFile(__dirname+"/indexAdmin.html");  
+  })
+  app.get("/drivesRegistrationForm",function(req,res){
+    res.sendFile(__dirname+"/drivesRegForm.html");
   })
   
 app.get("/recruiterHistory",function(req,res){
@@ -148,8 +186,8 @@ app.get('/', function (req, res,html) {
     res.sendFile((__dirname+'/mainLogin.html'));
    });
 
-app.get('/drives', function (req, res,html) {
-        res.sendFile((__dirname+'/drives.html'));
+app.get('/drives', function (req, res) {
+    res.render("drives");
 });
 
    
@@ -164,9 +202,20 @@ app.post("/studentRegistrationForm",function(req,res){
         batch:req.body.batch,
         status:req.body.status
     });
+
     newNote.save();
-    res.redirect("/");
+    res.redirect("back");    
 })
+
+// router.get('/edit/:id',(req,res,next)=>{
+//     console.log(req.params.id);
+//     console.log(req.params.id);
+//    // res.render('edit');
+//     Student.findOneAndUpdate({_id:req.params.id},req.body,{new:true},(err,docs)=>{
+//         res.render('edit',{Student:docs});
+//     })
+
+// })
 
 app.post("/RecruiterRegistrationForm",function(req,res){
     let newNote=new Recruiter({
@@ -198,7 +247,7 @@ app.post("/visitedCompanyRegistrationForm",function(req,res){
         name:req.body.name,
         location:req.body.location,
         ctc:req.body.ctc,
-        cgpa:req.body.cpga,
+        cgpa:req.body.cgpa,
         branch:req.body.branch,
         job:req.body.job,
         year:req.body.year
@@ -207,6 +256,21 @@ app.post("/visitedCompanyRegistrationForm",function(req,res){
     res.redirect("visitedCompanies");
 })
 
+app.post("/drivesRegistrationForm",function(req,res){
+    let newNote=new Drives({
+        name:req.body.name,
+        job:req.body.job,
+        location:req.body.location,
+        branch:req.body.branch,
+        ctc:req.body.ctc,
+        domain:req.body.domain,
+        cgpa:req.body.cgpa,
+        date:req.body.date,
+        status:req.body.status
+    });
+    newNote.save();
+    res.redirect("drives");
+})
 
 app.listen(3000,function(){
     console.log("server is ruuning");

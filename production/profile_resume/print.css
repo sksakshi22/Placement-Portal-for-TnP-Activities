@@ -52,6 +52,6 @@ button:-moz-focusring,
     }
 }
 
-#document-controls, #github-link, iframe {
+#document-controls, iframe {
     display: none !important;
 }

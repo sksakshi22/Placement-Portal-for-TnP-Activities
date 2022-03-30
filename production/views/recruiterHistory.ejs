@@ -59,11 +59,11 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a href="drives.html"><i class="fa fa-list"></i> Drives </a>
+                  <li><a href="/drives"><i class="fa fa-list"></i> Drives </a>
                    </li>
                   <li><a><i class="fa fa-building-o"></i> Company <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="visitedCompanies.html">Visited Company</a></li>
+                      <li><a href="/visitedCompanies">Visited Company</a></li>
                       <li><a href="/recruiterHistory">Recruiter History</a></li>
                     </ul>
                   </li>
@@ -85,7 +85,7 @@
                   </li>
                   <li><a href="interviewExp.html"><i class="fa fa-file-text-o"></i> Interview Experience</a>
                   </li>
-                  <li><a href="tpoRoles.html"><i class="fa fa-user-plus"></i> Add TPO Roles</a>
+                  <li><a href="/tpoRoles"><i class="fa fa-user-plus"></i> Add TPO Roles</a>
                   </li>
                   
               </div>
@@ -253,6 +253,7 @@
                           <th>Phone Number</th>
                           <th>Email id</th>
                           <th>Year</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
 
@@ -265,6 +266,10 @@
                          <td><%= recruiter.phone %></td>
                          <td><%= recruiter.email %></td>
                          <td><%= recruiter.year %></td>
+                         <td>
+                          <a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i>  </a>
+                          <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>  </a>
+                        </td>
                         
                        </tr>
                        <% })%>

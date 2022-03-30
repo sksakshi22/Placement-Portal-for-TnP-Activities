@@ -1,5 +1,5 @@
 body {
-    background: #f2f4f8;
+    background: linear-gradient(-135deg, #3f123b, #1c2557);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -7,7 +7,6 @@ body {
     height: 100vh;
     font-family: "Open Sans";
   }
-  
   .education {
     --bg-color: #ffd861;
     --bg-color-light: #ffeeba;
