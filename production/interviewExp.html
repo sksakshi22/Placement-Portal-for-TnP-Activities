@@ -11,23 +11,33 @@
     <title>TnP Portal </title>
 
     <!-- Bootstrap -->
-    <link href="..//vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="public/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="public/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="public/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="public/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="public/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="public/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="public/build/css/custom.min.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    
+    <link href="public/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+
   </head>
 
   <body class="nav-md">
@@ -64,16 +74,16 @@
                   <li><a><i class="fa fa-building-o"></i> Company <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="visitedCompanies.html">Visited Company</a></li>
-                      <li><a href="recruiterHistory.html">Recruiter History</a></li>
+                      <li><a href="/recruiterHistory">Recruiter History</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-graduation-cap"></i> Students <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="btechComp.html">B.Tech Computer</a></li>
-                        <li><a href="btechIT.html">B.Tech IT </a></li>
-                        <li><a href="btechEntc.html">B.tech ENTC</a></li>
-                        <li><a href="btechIS.html">B.Tech Instrumentation </a></li>
-                        <li><a href="btechMechanical.html">B.Tech Mechanical</a></li>
+                      <li><a href="/btechComp">B.Tech Computer</a></li>
+                      <li><a href="/btechIT">B.Tech IT </a></li>
+                      <li><a href="/btechEntc">B.tech ENTC</a></li>
+                      <li><a href="/btechIS">B.Tech Instrumentation </a></li>
+                      <li><a href="/btechMechanical">B.Tech Mechanical</a></li>
                     </ul>
                   </li>
                   <li><a href=""><i class="fa fa-edit"></i> Create Notice</a>
@@ -103,7 +113,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="mainLogin.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -211,422 +221,107 @@
         <!-- /top navigation -->
 
         <!-- page content -->
+
         <div class="right_col" role="main">
-            <div class="">
-                <div class="page-title">
-                  <div class="title_left">
-                    <h3>Interview Experience <small></small></h3>
+          <div class="">
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+            
+             
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Interview Experience</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Settings 1</a>
+                            <a class="dropdown-item" href="#">Settings 2</a>
+                          </div>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
                   </div>
-    
-                  <!-- <div class="title_right">
-                    <div class="col-md-5 col-sm-5   form-group pull-right top_search">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span class="input-group-btn">
-                          <button class="btn btn-secondary" type="button">Go!</button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-                
-                <div class="clearfix"></div>
-    
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="x_panel">
-                      <div class="x_title">
-                        <!-- <h2>Projects</h2> -->
-                        <ul class="nav navbar-right panel_toolbox">
-                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Settings 1</a>
-                                <a class="dropdown-item" href="#">Settings 2</a>
-                              </div> -->
-                          </li>
-                          <li><a class="close-link"><i class="fa fa-close"></i></a>
-                          </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                      </div>
-                      <div class="x_content">
-    
-                        <!-- <p>Simple table with project listing with progress and editing options</p> -->
-    
-                        <!-- start project list -->
-                        <table class="table table-striped projects">
-                          <thead>
-                            <tr>
-                              <th style="width: 1%">#</th>
-                              <th style="width: 20%">Company Name</th>
-                              <th>Student Name</th>
-                              <th>Reviews</th>
-                              <th>Experience</th>
-                              <th style="width: 20%">Edit</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>Walmart</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a>Sakshi Kumbhar</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
-                                </div>
-                                <small>57 Reviews </small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>Veritas</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a>Sampada Bathe</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
-                                </div>
-                                <small>47 Reviews</small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>Pub Matic</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a>Prachi waware</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                </div>
-                                <small>77 Reviews</small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>Oracle</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a>Madhurima Ghosh</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
-                                </div>
-                                <small>60 Reviews</small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>Walmart</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a> Arati Shitole</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="12"></div>
-                                </div>
-                                <small>12 Reviews</small>
-                              </td>
-                              <td>
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>Athena Health</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a>Vaidahi Tule</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="35"></div>
-                                </div>
-                                <small>35 Reviews</small>
-                              </td>
-                              <td>
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>UBS</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a>Ayesha Tadmod</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="87"></div>
-                                </div>
-                                <small>87 Reviews</small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>CISCO</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a> Swamini chaudhari</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                </div>
-                                <small>77 Reviews</small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-    
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>#</td>
-                              <td>
-                                <a>IBM</a>
-                                <br />
-                                <small>Created 01.01.2015</small>
-                              </td>
-                              <td>
-                                <!-- <ul class="list-inline">
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                  <li>
-                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                  </li>
-                                </ul> -->
-                                <a> Richa Pawar</a>
-                              </td>
-                              <td class="project_progress">
-                                <div class="progress progress_sm">
-                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                </div>
-                                <small>77 Reviews</small>
-                              </td>
-                              <td>
-                                <!-- <button type="button" class="btn btn-success btn-xs">Success</button> -->
-                                <p>The Experience posted  by students will appear here.</p>
-                              </td>
-                              <td>
-                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <!-- end project list -->
-    
-                      </div>
-                    </div>
+                  <div class="x_content">
+                      <div class="row">
+                          <div class="col-sm-12">
+                            
+                            <div class="card-box table-responsive">
+                             
+                              <div style="float: right; margin-bottom: 15px;" ><input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search.." class="form-control input-sm" aria-controls="datatable-buttons">
+                              </div>
+                              <table id="datatable-buttons_filter" class="table dataTables_filter table-striped table-bordered" style="width:100%">
+                          
+                              <thead>
+                                <tr >
+                                  <th style="width: 30%" >Company Name</th>
+                                  <th style="width: 25%">Total Experience Count</th>
+                                  <th style="width: 40%">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a>Walmart</a>
+                                    <br />
+                                   
+                                  </td>
+                                  <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                      <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
+                                    </div>
+                                    <small>57 Reviews </small>
+                                  </td>
+                                  <td>
+                                    <a href="#" class="btn btn-info btn-xs menu-button" ><i class="fa fa-eye"></i>  </a>
+                                    <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i>  </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>  </a>
+                                  </td>
+                              
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a>Anaya</a>
+                                    <br />
+                                   
+                                  </td>
+                                  <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                      <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
+                                    </div>
+                                    <small>57 Reviews </small>
+                                  </td>
+                                  <td>
+                                    <a href="#" class="btn btn-info btn-xs menu-button" ><i class="fa fa-eye"></i>  </a>
+                                    <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i>  </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>  </a>
+                                  </td>
+                              
+                                </tr>
+
+                              </tbody>
+                        
+                     
+                    </table>
                   </div>
                 </div>
               </div>
-    
+            </div>
+                </div>
+            </div> 
+            </div>
+          </div>
         </div>
+        
+
+
         <!-- /page content -->
 
         <!-- footer content -->
@@ -640,46 +335,93 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="../vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+       <!-- jQuery -->
+       <script src="public/vendors/jquery/dist/jquery.min.js"></script>
+       <!-- Bootstrap -->
+       <script src="public/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       <!-- FastClick -->
+       <script src="public/vendors/fastclick/lib/fastclick.js"></script>
+       <!-- NProgress -->
+       <script src="public/vendors/nprogress/nprogress.js"></script>
+       <!-- Chart.js -->
+       <script src="public/vendors/Chart.js/dist/Chart.min.js"></script>
+       <!-- gauge.js -->
+       <script src="public/vendors/gauge.js/dist/gauge.min.js"></script>
+       <!-- bootstrap-progressbar -->
+       <script src="public/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+       <!-- iCheck -->
+       <script src="public/vendors/iCheck/icheck.min.js"></script>
+       <!-- Skycons -->
+       <script src="public/vendors/skycons/skycons.js"></script>
+       <!-- Flot -->
+       <script src="public/vendors/Flot/jquery.flot.js"></script>
+       <script src="public/vendors/Flot/jquery.flot.pie.js"></script>
+       <script src="public/vendors/Flot/jquery.flot.time.js"></script>
+       <script src="public/vendors/Flot/jquery.flot.stack.js"></script>
+       <script src="public/vendors/Flot/jquery.flot.resize.js"></script>
+       <!-- Flot plugins -->
+       <script src="public/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+       <script src="public/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+       <script src="public/vendors/flot.curvedlines/curvedLines.js"></script>
+       <!-- DateJS -->
+       <script src="public/vendors/DateJS/build/date.js"></script>
+       <!-- JQVMap -->
+       <script src="public/vendors/jqvmap/dist/jquery.vmap.js"></script>
+       <script src="public/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+       <script src="public/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+       <!-- bootstrap-daterangepicker -->
+       <script src="public/vendors/moment/min/moment.min.js"></script>
+       <script src="public/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+   
+       <!-- Datatables -->
+     <script src="public/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+     <script src="public/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+     <script src="public/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+     <script src="public/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+     <script src="public/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+     <script src="public/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+     <script src="public/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+     <script src="public/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+     <script src="public/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+     <script src="public/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+     <script src="public/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+     <script src="public/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+     <script src="public/vendors/jszip/dist/jszip.min.js"></script>
+     <script src="public/vendors/pdfmake/build/pdfmake.min.js"></script>
+     <script src="public/vendors/pdfmake/build/vfs_fonts.js"></script>
+ 
+    
 
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-	
+       <!-- Custom Theme Scripts -->
+       <script src="public/build/js/custom.min.js"></script>
+
+       <script type="text/css">
+        menu-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+       </script>
+   
+       <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("datatable-buttons_filter");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
   </body>
 </html>
